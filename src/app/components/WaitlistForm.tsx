@@ -1,30 +1,30 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function WaitlistForm() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [utm, setUtm] = useState<Record<string, string | null>>({});
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    setUtm({
+      utm_source: params.get("utm_source"),
+      utm_medium: params.get("utm_medium"),
+      utm_campaign: params.get("utm_campaign"),
+    });
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("loading");
 
-    const formId = process.env.NEXT_PUBLIC_FORMSPREE_ID;
-    if (!formId) {
-      console.error("NEXT_PUBLIC_FORMSPREE_ID is not set");
-      setStatus("error");
-      return;
-    }
-
     try {
-      const res = await fetch(`https://formspree.io/f/${formId}`, {
+      const res = await fetch("/api/waitlist", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({ email }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, ...utm }),
       });
 
       if (res.ok) {
@@ -40,14 +40,11 @@ export default function WaitlistForm() {
 
   if (status === "success") {
     return (
-      <div
-        className="card-border rounded-2xl px-8 py-7 text-center glow-blue"
-        style={{ maxWidth: 440 }}
-      >
+      <div className="card-border rounded-2xl px-8 py-7 text-center glow-blue" style={{ maxWidth: 440 }}>
         <div className="text-3xl mb-3">🎉</div>
         <p className="text-white font-semibold text-lg mb-1">You&apos;re on the list!</p>
         <p style={{ color: "rgba(255,255,255,0.6)" }} className="text-sm">
-          We&apos;ll send you an email the moment Nixd is available on the App Store.
+          We&apos;ll email you on April 12th when Nixd is live on the App Store.
         </p>
       </div>
     );

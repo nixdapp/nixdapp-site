@@ -1,4 +1,5 @@
 import WaitlistForm from "./components/WaitlistForm";
+import QuizWaitlist from "./components/QuizWaitlist";
 
 const features = [
   {
@@ -35,7 +36,7 @@ export default function HomePage() {
             color: "#2196F3",
           }}
         >
-          iOS · Coming Soon
+          iOS · April 12
         </span>
       </nav>
 
@@ -54,7 +55,7 @@ export default function HomePage() {
             className="w-1.5 h-1.5 rounded-full"
             style={{ background: "#00BCD4" }}
           />
-          Quit Vaping App · iOS · 2025
+          Quit Vaping App · iOS · April 12
         </div>
 
         {/* Headline */}
@@ -74,12 +75,9 @@ export default function HomePage() {
           one smoke-free day at a time.
         </p>
 
-        {/* Waitlist form */}
-        <div className="flex flex-col items-center gap-4 w-full">
-          <p className="text-sm font-semibold tracking-wide uppercase" style={{ color: "#8899AA" }}>
-            Get notified when Nixd launches
-          </p>
-          <WaitlistForm />
+        {/* Quiz + Waitlist */}
+        <div className="flex flex-col items-center w-full">
+          <QuizWaitlist />
         </div>
       </section>
 
@@ -122,7 +120,7 @@ export default function HomePage() {
           Ready to be free?
         </h2>
         <p className="mb-8" style={{ color: "rgba(255,255,255,0.6)" }}>
-          Join the waitlist and be the first to know when Nixd hits the App Store.
+          Nixd launches on the App Store April 12. Get notified the moment it&apos;s live.
         </p>
         <div className="flex justify-center">
           <WaitlistForm />
