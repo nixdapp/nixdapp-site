@@ -98,20 +98,6 @@ export default function PrivacyPage() {
 
           <section>
             <h2 className="text-xl font-semibold text-text-primary mb-3">
-              What We Don&apos;t Do
-            </h2>
-            <ul className="list-disc list-inside space-y-2">
-              <li>We do not sell your data to third parties. Ever.</li>
-              <li>We do not share your personal data with advertisers.</li>
-              <li>
-                We do not use your data for purposes unrelated to helping you
-                quit.
-              </li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-semibold text-text-primary mb-3">
               Your Rights
             </h2>
             <p>
