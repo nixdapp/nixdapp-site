@@ -75,10 +75,12 @@ export default function SupportPage() {
           </FAQ>
 
           <FAQ q="What are the health milestones?">
-            Nixd tracks 18 milestones tied to real physiological recovery — from
-            nicotine leaving your body on Day 3, to your lungs recovering at
-            Month 6, to heart disease risk dropping by half at Year 1. Each one
-            unlocks automatically when you reach it.
+            Nixd tracks 19 milestones tied to real physiological recovery — from
+            carbon monoxide normalizing on Day 1, to lung cilia regrowing at Day
+            5, to dopamine pathways rebuilding at Day 10, to lung function up to
+            30% better at Month 1, to heart disease risk dropping by half at
+            Year 1, all the way to Year 2. Each milestone unlocks automatically
+            when you reach it.
           </FAQ>
 
           <FAQ q="Does the app work offline?">

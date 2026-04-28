@@ -18,22 +18,28 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://nixdapp.com"),
   title: {
-    default: "Nixd — Quit Vaping & Nicotine Pouches | iOS App",
+    default: "Nixd — Quit Vaping, Pouches & Cigarettes | iOS App",
     template: "%s | Nixd",
   },
   description:
-    "Nixd is a quit-vaping iOS app for vapes, JUUL, and nicotine pouches like Zyn, On!, and Velo. Personalized quit plans, live streak tracking, SOS craving tools, and money-saved counter.",
+    "Nixd is the personalized iOS quit-vaping companion for vapes, JUUL, nicotine pouches (Zyn, On!, Velo) and cigarettes. Adaptive taper plans, live streak, 19 health milestones, SOS toolkit (box breathing, grounding, movement, distraction games), and a money-saved counter. Free download.",
   applicationName: "Nixd",
   keywords: [
     "quit vaping",
+    "stop vaping app",
     "quit nicotine pouches",
     "Zyn",
     "JUUL",
     "On! pouches",
     "Velo",
-    "nicotine cessation",
-    "stop vaping app",
     "quit smoking iOS",
+    "nicotine cessation",
+    "vape free",
+    "nicotine taper app",
+    "puff counter",
+    "craving tracker",
+    "quit cigarettes",
+    "lung recovery timeline",
   ],
   alternates: {
     canonical: "/",
@@ -45,22 +51,23 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
       "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   openGraph: {
     type: "website",
     siteName: "Nixd",
-    title: "Nixd — Quit Vaping & Nicotine Pouches",
+    title: "Nixd — Quit Vaping, Pouches & Cigarettes",
     description:
-      "Personalized quit plans for vapes, JUUL, and nicotine pouches. Live streak, SOS craving toolkit, money-saved counter. iOS, free download.",
+      "Personalized iOS quit-vaping companion. Adaptive taper plans, live streak, 19 health milestones, SOS toolkit, money-saved counter. Free download.",
     url: "https://nixdapp.com/",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nixd — Quit Vaping & Nicotine Pouches",
+    title: "Nixd — Quit Vaping, Pouches & Cigarettes",
     description:
-      "Personalized quit plans for vapes, JUUL, and nicotine pouches. Live streak, SOS craving toolkit, money-saved counter.",
+      "Personalized iOS quit-vaping companion. Adaptive taper plans, live streak, 19 health milestones, SOS toolkit, money-saved counter.",
   },
   appleWebApp: {
     title: "Nixd",
@@ -68,6 +75,9 @@ export const metadata: Metadata = {
   itunes: {
     appId: "6761740706",
   },
+  category: "Health & Fitness",
+  authors: [{ name: "Nixd LLC", url: "https://nixdapp.com" }],
+  publisher: "Nixd LLC",
 };
 
 const jsonLd = {
@@ -79,6 +89,8 @@ const jsonLd = {
       name: "Nixd LLC",
       url: "https://nixdapp.com/",
       email: "feedback@nixdapp.com",
+      logo: "https://nixdapp.com/icon.png",
+      sameAs: [APP_STORE_URL],
     },
     {
       "@type": "WebSite",
@@ -92,18 +104,32 @@ const jsonLd = {
       "@type": "MobileApplication",
       "@id": "https://nixdapp.com/#app",
       name: "Nixd: Quit Vaping & Pouches",
-      operatingSystem: "iOS 17+",
+      operatingSystem: "iOS 17.0+",
       applicationCategory: "HealthApplication",
+      applicationSubCategory: "Smoking Cessation",
       url: APP_STORE_URL,
       downloadUrl: APP_STORE_URL,
+      installUrl: APP_STORE_URL,
       publisher: { "@id": "https://nixdapp.com/#org" },
       description:
-        "Quit-vaping and nicotine pouch cessation app with personalized quit plans, live streak tracking, SOS craving toolkit, and money-saved counter.",
+        "Personalized iOS quit companion for vapes, JUUL, nicotine pouches (Zyn, On!, Velo) and cigarettes. Adaptive taper plans, live streak tracking, 19 health milestones, SOS craving toolkit, money-saved counter, offline-first sync.",
+      featureList: [
+        "Personalized 24-question quit-plan onboarding",
+        "Multi-product tracking (vapes, pouches, cigarettes)",
+        "Cold turkey or 7–90 day adaptive taper",
+        "Live streak with money-saved counter",
+        "19 evidence-based health milestones",
+        "SOS toolkit: box breathing, 5-senses grounding, movement, distraction games",
+        "Mood and craving outcome logging",
+        "Offline-first with end-to-end private sync",
+        "Apple Sign In, no data sold",
+      ],
       offers: {
         "@type": "Offer",
         price: "29.99",
         priceCurrency: "USD",
         category: "subscription",
+        availability: "https://schema.org/InStock",
       },
     },
   ],
