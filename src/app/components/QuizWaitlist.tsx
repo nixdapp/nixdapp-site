@@ -84,10 +84,10 @@ export default function QuizWaitlist() {
   if (step === "success") {
     return (
       <div className="card-border rounded-2xl px-8 py-8 text-center glow-blue w-full" style={{ maxWidth: 480 }}>
-        <div className="text-4xl mb-3">🎉</div>
-        <p className="text-white font-semibold text-lg mb-1">You&apos;re on the list!</p>
+        <div className="text-4xl mb-3">💪</div>
+        <p className="text-white font-semibold text-lg mb-1">You&apos;ve got this.</p>
         <p className="text-sm" style={{ color: "rgba(255,255,255,0.55)" }}>
-          We&apos;ll email you the moment Nixd is live on the App Store.
+          Download Nixd to start your personalized quit plan.
         </p>
         {selectedSpend && (
           <div
@@ -100,6 +100,14 @@ export default function QuizWaitlist() {
             </span>
           </div>
         )}
+        <a
+          href="https://apps.apple.com/us/app/nixd-quit-vaping-pouches/id6761740706"
+          target="_blank"
+          rel="noopener"
+          className="cta-gradient mt-5 inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold text-white w-full"
+        >
+          Download on the App Store
+        </a>
       </div>
     );
   }

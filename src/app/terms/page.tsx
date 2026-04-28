@@ -26,7 +26,7 @@ export default function TermsPage() {
             <p>
               These Terms of Use (&quot;Terms&quot;) govern your access to and
               use of the Nixd: Quit Vaping &amp; Pouches mobile application
-              (bundle ID: <code>com.nixdvaping.app</code>) provided by Nixd LLC
+              (bundle ID: <code>com.nixdapp.app</code>) provided by Nixd LLC
               (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;). By downloading,
               installing, or using Nixd, you agree to be bound by these Terms.
               If you do not agree, do not use the app.
