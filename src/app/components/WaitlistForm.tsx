@@ -44,7 +44,7 @@ export default function WaitlistForm() {
         <div className="text-3xl mb-3">🎉</div>
         <p className="text-white font-semibold text-lg mb-1">You&apos;re on the list!</p>
         <p style={{ color: "rgba(255,255,255,0.6)" }} className="text-sm">
-          We&apos;ll email you on April 12th when Nixd is live on the App Store.
+          We&apos;ll email you the moment Nixd is live on the App Store.
         </p>
       </div>
     );

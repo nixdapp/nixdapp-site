@@ -87,7 +87,7 @@ export default function QuizWaitlist() {
         <div className="text-4xl mb-3">🎉</div>
         <p className="text-white font-semibold text-lg mb-1">You&apos;re on the list!</p>
         <p className="text-sm" style={{ color: "rgba(255,255,255,0.55)" }}>
-          We&apos;ll email you on April 12th when Nixd is live on the App Store.
+          We&apos;ll email you the moment Nixd is live on the App Store.
         </p>
         {selectedSpend && (
           <div
@@ -179,7 +179,7 @@ export default function QuizWaitlist() {
       )}
 
       <p className="text-sm font-semibold mb-4 text-center" style={{ color: "#8899AA" }}>
-        Notify me when Nixd launches on April 12
+        Notify me when Nixd launches
       </p>
 
       <form onSubmit={handleSubmit}>
